@@ -1,0 +1,47 @@
+[
+  {
+    "task_id": "HumanEval/0",
+    "judgment": {
+      "label": "UNKNOWN",
+      "confidence": 0.0,
+      "rationale": "LLM_ERROR: Fields must not use names with leading underscores; e.g., use 'pydantic_extra__' instead of '__pydantic_extra__'."
+    },
+    "raw_response": "LLM_ERROR: Fields must not use names with leading underscores; e.g., use 'pydantic_extra__' instead of '__pydantic_extra__'."
+  },
+  {
+    "task_id": "HumanEval/1",
+    "judgment": {
+      "label": "PASS",
+      "confidence": 0.95,
+      "rationale": "The solution correctly constructs balanced parentheses groups and handles the input string as specified."
+    },
+    "raw_response": "{\"label\":\"PASS\",\"confidence\":0.95,\"rationale\":\"The solution correctly constructs balanced parentheses groups and handles the input string as specified.\"}"
+  },
+  {
+    "task_id": "HumanEval/2",
+    "judgment": {
+      "label": "UNKNOWN",
+      "confidence": 0.0,
+      "rationale": "```json\n{\"label\":\"PASS\",\"confidence\":0.9,\"rationale\":\"The candidate solution correctly returns the decimal part of a number using the modulus operator.\"}\n```"
+    },
+    "raw_response": "```json\n{\"label\":\"PASS\",\"confidence\":0.9,\"rationale\":\"The candidate solution correctly returns the decimal part of a number using the modulus operator.\"}\n```"
+  },
+  {
+    "task_id": "HumanEval/3",
+    "judgment": {
+      "label": "UNKNOWN",
+      "confidence": 0.0,
+      "rationale": "```json\n{\"label\":\"PASS\",\"confidence\":1.0,\"rationale\":\"The candidate solution correctly implements the logic to track the balance and returns True if it falls below zero.\"}\n```"
+    },
+    "raw_response": "```json\n{\"label\":\"PASS\",\"confidence\":1.0,\"rationale\":\"The candidate solution correctly implements the logic to track the balance and returns True if it falls below zero.\"}\n```"
+  },
+  {
+    "task_id": "HumanEval/4",
+    "judgment": {
+      "label": "PASS",
+      "confidence": 1.0,
+      "rationale": "The candidate solution correctly calculates the Mean Absolute Deviation by finding the mean and averaging the absolute differences."
+    },
+    "raw_response": "{\"label\":\"PASS\",\"confidence\":1.0,\"rationale\":\"The candidate solution correctly calculates the Mean Absolute Deviation by finding the mean and averaging the absolute differences.\"}"
+  }
+]

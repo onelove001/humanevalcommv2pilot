@@ -1,0 +1,98 @@
+[
+  {
+    "task_id": "HumanEval/0",
+    "ensemble_judgment": {
+      "label": "PASS",
+      "confidence": 0.5,
+      "rationale": "Ensemble of 2 judges agreed by majority vote."
+    },
+    "individual_judgments": [
+      {
+        "label": "UNKNOWN",
+        "confidence": 0.0,
+        "rationale": "LLM_ERROR: Fields must not use names with leading underscores; e.g., use 'pydantic_extra__' instead of '__pydantic_extra__'."
+      },
+      {
+        "label": "PASS",
+        "confidence": 1,
+        "rationale": "The solution correctly iterates through all pairs of numbers and calculates the distance between them."
+      }
+    ],
+    "raw_responses": {
+      "gpt-4o-mini": "LLM_ERROR: Fields must not use names with leading underscores; e.g., use 'pydantic_extra__' instead of '__pydantic_extra__'.",
+      "gpt-3.5-turbo": "{\n    \"label\": \"PASS\",\n    \"confidence\": 1,\n    \"rationale\": \"The solution correctly iterates through all pairs of numbers and calculates the distance between them.\"\n}"
+    }
+  },
+  {
+    "task_id": "HumanEval/1",
+    "ensemble_judgment": {
+      "label": "PASS",
+      "confidence": 0.5,
+      "rationale": "Ensemble of 2 judges agreed by majority vote."
+    },
+    "individual_judgments": [
+      {
+        "label": "UNKNOWN",
+        "confidence": 0.0,
+        "rationale": "```json\n{\"label\":\"PASS\",\"confidence\":0.95,\"rationale\":\"The solution correctly identifies and separates groups of parentheses while maintaining balance and ignores spaces.\"}\n```"
+      },
+      {
+        "label": "PASS",
+        "confidence": 1,
+        "rationale": "The candidate solution correctly separates the groups of nested parentheses into separate strings."
+      }
+    ],
+    "raw_responses": {
+      "gpt-4o-mini": "```json\n{\"label\":\"PASS\",\"confidence\":0.95,\"rationale\":\"The solution correctly identifies and separates groups of parentheses while maintaining balance and ignores spaces.\"}\n```",
+      "gpt-3.5-turbo": "{\n    \"label\": \"PASS\",\n    \"confidence\": 1,\n    \"rationale\": \"The candidate solution correctly separates the groups of nested parentheses into separate strings.\"\n}"
+    }
+  },
+  {
+    "task_id": "HumanEval/2",
+    "ensemble_judgment": {
+      "label": "PASS",
+      "confidence": 0.97,
+      "rationale": "Ensemble of 2 judges agreed by majority vote."
+    },
+    "individual_judgments": [
+      {
+        "label": "PASS",
+        "confidence": 0.95,
+        "rationale": "The implementation correctly returns the decimal part of the number using the modulus operator."
+      },
+      {
+        "label": "PASS",
+        "confidence": 1,
+        "rationale": "The candidate solution correctly returns the decimal part of the input number using the modulo operator."
+      }
+    ],
+    "raw_responses": {
+      "gpt-4o-mini": "{\n  \"label\": \"PASS\",\n  \"confidence\": 0.95,\n  \"rationale\": \"The implementation correctly returns the decimal part of the number using the modulus operator.\"\n}",
+      "gpt-3.5-turbo": "{\n  \"label\": \"PASS\",\n  \"confidence\": 1,\n  \"rationale\": \"The candidate solution correctly returns the decimal part of the input number using the modulo operator.\"\n}"
+    }
+  },
+  {
+    "task_id": "HumanEval/3",
+    "ensemble_judgment": {
+      "label": "PASS",
+      "confidence": 0.5,
+      "rationale": "Ensemble of 2 judges agreed by majority vote."
+    },
+    "individual_judgments": [
+      {
+        "label": "UNKNOWN",
+        "confidence": 0.0,
+        "rationale": "```json\n{\"label\":\"PASS\",\"confidence\":1.0,\"rationale\":\"The candidate solution correctly implements the logic to track the balance and checks if it falls below zero.\"}\n```"
+      },
+      {
+        "label": "PASS",
+        "confidence": 1,
+        "rationale": "The candidate solution correctly iterates through the operations list and returns True when balance falls below zero."
+      }
+    ],
+    "raw_responses": {
+      "gpt-4o-mini": "```json\n{\"label\":\"PASS\",\"confidence\":1.0,\"rationale\":\"The candidate solution correctly implements the logic to track the balance and checks if it falls below zero.\"}\n```",
+      "gpt-3.5-turbo": "{\n  \"label\": \"PASS\",\n  \"confidence\": 1,\n  \"rationale\": \"The candidate solution correctly iterates through the operations list and returns True when balance falls below zero.\"\n}"
+    }
+  }
+]
