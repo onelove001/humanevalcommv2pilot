@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 
 def analyze_results(baseline_file, execution_file, output_file, plot_file):
-    # Load baseline and execution results
     with open(baseline_file, "r") as f:
         baseline = {item["task_id"]: item for item in json.load(f)}
     
@@ -24,7 +23,7 @@ def analyze_results(baseline_file, execution_file, output_file, plot_file):
         base_label = base_judgment.get("label", None)
 
         if base_label is None:
-            continue  # skip missing cases
+            continue
 
         if base_label == gt:
             agree += 1
@@ -67,7 +66,6 @@ def analyze_results(baseline_file, execution_file, output_file, plot_file):
     plt.title("Baseline Judge vs Ground Truth")
     plt.ylabel("Count")
 
-    # Annotate values on top of bars
     for bar in bars:
         height = bar.get_height()
         plt.text(bar.get_x() + bar.get_width()/2, height + 0.2,
@@ -77,8 +75,6 @@ def analyze_results(baseline_file, execution_file, output_file, plot_file):
     plt.close()
     print(f"Bar chart saved to {plot_file}")
 
-
-# 🔹 Run directly when script is executed
 if __name__ == "__main__":
     analyze_results(
         baseline_file="data/baseline_outputs.json",

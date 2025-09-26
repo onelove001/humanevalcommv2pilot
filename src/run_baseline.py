@@ -1,4 +1,3 @@
-# src/run_baseline.py
 import json
 import argparse
 from llm_wrapper import call_llm

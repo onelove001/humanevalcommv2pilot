@@ -1,4 +1,3 @@
-# src/run_execution_eval.py
 import json
 import argparse
 import ast
@@ -22,7 +21,7 @@ def strip_type_hints(code: str) -> str:
 
 def run_test_case(func_code, test_case):
     try:
-        # ✅ Clean solution (remove typing imports + type hints)
+       
         func_code = "\n".join(
             [ln for ln in func_code.splitlines() if not ln.strip().startswith("from typing")]
         )
@@ -33,7 +32,6 @@ def run_test_case(func_code, test_case):
 
         exec(func_code, safe_globals, local_ns)
 
-        # Get function dynamically
         func_name = [k for k, v in local_ns.items() if callable(v)][0]
         func = local_ns[func_name]
 
@@ -72,8 +70,6 @@ def run_execution_eval(input_file, output_file):
         row = item["row"]
         solution = row["solution"]
         task_id = row["name"]
-
-        # Convert test_case string into list of dicts
         try:
             test_cases = eval(row["test_case"])
         except Exception:
@@ -84,7 +80,7 @@ def run_execution_eval(input_file, output_file):
         for tc in test_cases:
             res = run_test_case(solution, tc)
             case_results.append(res)
-            if res is not True:  # error or fail
+            if res is not True:
                 all_passed = False
 
         results.append({

@@ -1,5 +1,3 @@
-# src/run_ensemble.py
-
 import json
 import argparse
 from llm_wrapper import call_llm
@@ -26,7 +24,7 @@ def aggregate(judgments):
     if not labels:
         return {"label": "UNKNOWN", "confidence": 0.0, "rationale": "No valid judgments"}
 
-    # Majority vote
+    # for the majority vote
     final_label = max(set(labels), key=labels.count)
     avg_conf = sum(confs) / len(confs) if confs else 0.0
 
@@ -54,7 +52,7 @@ def run_ensemble(input_file, output_file, models):
             prompt = JUDGE_PROMPT.format(problem=problem, solution=solution)
             resp = call_llm(prompt, model=m)
 
-            # Try parsing JSON
+            # parsing JSON
             parsed = None
             try:
                 parsed = json.loads(resp)

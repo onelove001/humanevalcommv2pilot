@@ -9,7 +9,7 @@ This repository contains the code, dataset subset, and analysis scripts for **Hu
 
 human-evalcomm-v2/
 
-── data/
+─ data/
    humanevalcomm_subset.json      # Dataset subset (JSON)
    baseline_outputs.json          # Baseline LLM judge results
    ensemble_outputs.json          # Multiple LLM Judge results
@@ -17,20 +17,20 @@ human-evalcomm-v2/
    analysis_report.json           # Final analysis
    analysis_plot.png              # Bar chart visualization
 
-── src/
+─ src/
    llm_wrapper.py                 # Calls LLM with a given prompt
    run_baseline.py                # Reproduce baseline (LLM judge)
    run_ensemble.py                # Reproduce multiple (LLM judges)
    run_execution.py               # Run execution tests
    analysis.py                    # Compare baseline vs. execution
 
-── report/
+─ report/
    HumanEvalComm-V2.pdf           # Short Technical report
 
-── README.md
+─ README.md
 
 
-## 🚀 Usage
+## Usage
 
 ### 1. Run Baseline LLM Judge
 
